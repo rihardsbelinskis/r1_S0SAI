@@ -1,0 +1,5 @@
+numpy
+stat
+SpeechRecognition
+Pillow
+gTTS
