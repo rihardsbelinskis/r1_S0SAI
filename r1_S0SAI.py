@@ -11,25 +11,28 @@
 
 
 # BUGS TO FIX:
-#
+
 # 1) If no keyw found, "local variable 'speech' referenced before assignment".
 # 2) If an existing keyword is mentioned, "Permission denied".
 # 3) Set arbitrary path for any username.
 # 4) 
 
+# IMPORTING DEPENDENCIES
+
 #import array
 #import cv2
 #import PIL.ImageGrab
 #import pytesseract
+#import stat
+#from PIL import Image
 
 import numpy as np
 import playsound
 import os
-import stat
 import speech_recognition as sr
-
-from PIL import Image
 from gtts import gTTS
+
+# GLOBAL VARIABLES
 
 PATH = "C:/Users/User/Desktop/r1_S0SAI/"	# Make sure this stays your own path
 
