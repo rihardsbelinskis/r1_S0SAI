@@ -6,7 +6,7 @@
 # delivers user-set details, in case of emergency. This application is    #
 # intended for life-thretening situations, where a person is unable to    #
 # speak. The goal is to have a fully automated bot, which delivers user   #
-# input to the according person / people.								  #
+# input to the according person / people.				  #
 #-------------------------------------------------------------------------#
 
 
@@ -31,7 +31,7 @@ import speech_recognition as sr
 from PIL import Image
 from gtts import gTTS
 
-PATH = "C:/Users/Gebruiker/Desktop/r1_EZPC/"	# Make sure this stays your own path
+PATH = "C:/Users/User/Desktop/r1_S0SAI/"	# Make sure this stays your own path
 
 def audioToText():
 	while True:
@@ -60,7 +60,7 @@ def keywordFinder(inputText):
 def responseSelector(foundKW):
 	response = ''
 	response_name = "Bobby"
-	response_address = "Hospital street 2B, Paisley, United Kingdom"
+	response_address = "Troll street 120A, Paisley, United Kingdom"
 	response_problem = "The person may be in critical condition and is unable to speak. Please send an ambulance!"
 	
 	if (not foundKW):
@@ -98,7 +98,7 @@ if __name__ == '__main__':
 #def connectingToAmbulance():
 #	connected = False
 
-#	introText = "You are speaking with the R 1 bot. This is an emergency. Please connect me to the ambulance of Hengelo."
+#	introText = "You are speaking with the R 1 bot. This is an emergency. Please connect me to the ambulance of Paisley."
 #	speech_intro = gTTS(introText)
 #	intro_audio_file = str("intro.mp3")
 #	speech_intro.save(intro_audio_file)
