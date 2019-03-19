@@ -75,7 +75,7 @@ def responseSelector(foundKW):
 		speech = gTTS(response)
 		audio_file = str("response_2.mp3")
 		speech.save(audio_file)
-	elif (foundKW == "'problem'" | foundKW == "'help'"):
+	elif (foundKW == "'problem'"):
 		response = response_problem
 		speech = gTTS(response)
 		audio_file = str("response_3.mp3")
