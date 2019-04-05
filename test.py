@@ -12,10 +12,7 @@
 
 # BUGS TO FIX:
 
-# 1) If no keyw found, "local variable 'speech' referenced before assignment".
-# 2) If an existing keyword is mentioned, "Permission denied".
-# 3) Set arbitrary path for any username.
-# 4)
+# 1) If an existing keyword is mentioned, "Permission denied".
 
 # IMPORTING DEPENDENCIES
 
@@ -34,13 +31,13 @@ from gtts import gTTS
 
 # GLOBAL VARIABLES
 
-PATH = os.path.dirname(os.path.abspath(__file__))	# Make sure this stays your own path
+PATH = os.path.join(os.path.expanduser('~'), 'Desktop', 'r1_S0SAI')
 
 def audioToText():
 	while True:
 		r = sr.Recognizer()
 		with sr.Microphone() as source:
-			print('Listening... ')
+			print('\nListening... ')
 			audio = r.listen(source)
 			try:
 				inputText = r.recognize_google(audio)
@@ -57,7 +54,7 @@ def keywordFinder(inputText):
 		foundKW = "No keyword has been found."
 	else:
 		foundKW = str(foundKW)[1:-1]
-		print("Found keyword: ", foundKW)
+		print"Found keyword: ", foundKW
 		return foundKW
 
 def responseSelector(foundKW):
@@ -66,20 +63,25 @@ def responseSelector(foundKW):
 	response_address = "Troll street 120A, Paisley, United Kingdom"
 	response_problem = "The person may be in critical condition and is unable to speak. Please send an ambulance!"
 
-	if (not foundKW):
-		foundKW = "No keyword has been found."
+	if not (foundKW):
+		response = "No keyword has been found."
+		print "Response: ",response
+		speech = gTTS(response)
 	elif (foundKW == "'name'"):
 		response = response_name
+		print "Response: ",response
 		speech = gTTS(response)
 		audio_file = str("response_1.mp3")
 		speech.save(audio_file)		# BUG: Permission denied
 	elif (foundKW == "'address'"):
 		response = response_address
+		print "Response: ",response
 		speech = gTTS(response)
 		audio_file = str("response_2.mp3")
 		speech.save(audio_file)
 	elif (foundKW == "'problem'"):
 		response = response_problem
+		print "Response:",response
 		speech = gTTS(response)
 		audio_file = str("response_3.mp3")
 		speech.save(audio_file)
