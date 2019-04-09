@@ -86,35 +86,3 @@ if __name__ == '__main__':
 		[speech, audio_file] = responseSelector(foundKW)
 		output = responseToSpeech(speech, audio_file)
 		os.remove(audio_file)
-
-# FUNCTION: CONNECTED "SPEACH". ADD "if (connected == True): in audioToText()"
-#def connectingToAmbulance():
-#	connected = False
-
-#	introText = "You are speaking with the R 1 bot. This is an emergency. Please connect me to the ambulance of Paisley."
-#	speech_intro = gTTS(introText)
-#	intro_audio_file = str("intro.mp3")
-#	speech_intro.save(intro_audio_file)
-
-#	print(introText)
-#	playsound.playsound(intro_audio_file, True)
-
-#	connected = True
-#	return connected
-
-# FUNCTION: FROM IMAGE TO TEXT
-#def textFromImg(PATH):
-#	pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
-#	saveImg = cv2.imread('save_file.png')
-
-#	kernel = np.ones((1, 1), np.uint8)
-#	grayImg = cv2.cvtColor(saveImg, cv2.COLOR_BGR2GRAY)
-#	img = cv2.dilate(grayImg, kernel, iterations = 1)
-#	img = cv2.erode(img, kernel, iterations = 1)
-#	cv2.imwrite(PATH + "removed_noise.png", img)
-
-#	img = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
-#	cv2.imwrite(PATH + "thres.png", img)
-
-#	result = pytesseract.image_to_string(Image.open(PATH + "thres.png"))
-#	return result
