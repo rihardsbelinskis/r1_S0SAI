@@ -1,18 +1,22 @@
 # Author: Rihards Belinskis ( https://www.github.com/rihardsbelinskis/ )
 # Project: r1_S0SAI
-# r1_B00K v0.1
+# r1_B00K v0.2
 
 # IMPORTING DEPENDENCIES
 
 import pytesseract
 import playsound
+import os
 from gtts import gTTS
 from PIL import Image, ImageEnhance, ImageFilter
 from pdf2image import convert_from_path
 
 
 pdf_file = 'test.pdf'
-pages = convert_from_path(pdf_file, 10) # set an arbitrary page amount
+title_end = pdf_file.index('.')
+title = pdf_file[:title_end]
+
+pages = convert_from_path(pdf_file, 500) # 500 for correct zoom
 for page in pages:
 	page.save('output.jpg', 'JPEG')
 
@@ -24,10 +28,12 @@ im = enhancer.enhance(2)
 im = im.convert('1')
 im.save('translated.jpg')
 text = pytesseract.image_to_string(Image.open('translated.jpg'))
-#print text
+print(text)
 
 speech = gTTS(text)
-audio_file = str("b00k.mp3")
+audio_file = str(title+"_audiob00k.mp3")
 speech.save(audio_file)
 playsound.playsound(audio_file, True)
 
+os.remove('translated.jpg')
+os.remove('output.jpg')
