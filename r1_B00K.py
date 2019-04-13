@@ -1,6 +1,6 @@
 # Author: Rihards Belinskis ( https://www.github.com/rihardsbelinskis/ )
 # Project: r1_S0SAI
-# r1_B00K v0.2
+# r1_B00K v0.3
 
 # IMPORTING DEPENDENCIES
 
