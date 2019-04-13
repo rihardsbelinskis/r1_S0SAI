@@ -11,11 +11,16 @@ The goal is to have a fully automated, conversational bot, which delivers inform
 
 * r1_B00K
 
-An audiobook generator. Coming soon...
+Is a script for generating an .mp3 file from a .pdf file. An audiobook generator. The aim is to create an application, which allows its users to generate an audiobook / audiofile from several common text document formats (.doc, .pdf, .txt).
 
 ------------------------------------------------------------------------
 
 # BUGS TO FIX:
 
+r1_S0SAI:
 1) An existing keyword results in: "Permission denied".
 2) Responses are hard-coded (AI must replace this).
+
+r1_B00K
+1) Works for single page.
+2) Non-arbitrary pdf_file name.
