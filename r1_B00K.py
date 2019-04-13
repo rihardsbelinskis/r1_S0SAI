@@ -2,8 +2,7 @@
 # Project: r1_S0SAI
 # r1_B00K v0.3
 
-# IMPORTING DEPENDENCIES
-
+# Importing dependencies
 import pytesseract
 import playsound
 import os
@@ -50,5 +49,4 @@ if __name__ == '__main__':
     # Removing temporary files
     os.remove('translated.jpg')
     os.remove('output.jpg')
-
 

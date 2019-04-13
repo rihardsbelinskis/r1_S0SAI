@@ -2,3 +2,5 @@ numpy
 SpeechRecognition
 Pillow
 gTTS
+pdf2image
+pytesseract
