@@ -21,6 +21,6 @@ r1_S0SAI:
 1) An existing keyword results in: "Permission denied".
 2) Responses are hard-coded (AI must replace this).
 
-r1_B00K
+r1_B00K:
 1) Works for single page.
 2) Non-arbitrary pdf_file name.
