@@ -1,4 +1,4 @@
-# Voice command and speech recognition scripts
+# Voice command, gTTS and speech recognition-based scripts
 
 * r1_S0SAI 
 
@@ -10,7 +10,7 @@ The goal is to have a fully automated, conversational bot, which delivers inform
 
 * r1_B00K
 
-Is a script for generating an .mp3 file from a .pdf file. An audiobook generator. The aim is to create an application, which allows its users to generate an audiobook / audiofile from several common text document formats (.doc, .pdf, .txt).
+An audiobook generator. It is a script for generating an .mp3 file from a .pdf file. The aim is to create an application, which allows its users to generate an audiobook / audiofile from several common text document formats (.doc, .pdf, .txt).
 
 ------------------------------------------------------------------------
 
