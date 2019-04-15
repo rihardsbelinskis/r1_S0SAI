@@ -1,5 +1,4 @@
-# r1_S0SAI
-------------------------------------------------------------------------
+# Voice command and speech recognition scripts
 
 * r1_S0SAI 
 
